@@ -1,6 +1,4 @@
 import React from 'react';
-import Navbar from '../nav/Navbar';
-import Footer from '../footer/Footer';
 import { Carousel } from 'react-bootstrap';
 import {
   MDBCard,

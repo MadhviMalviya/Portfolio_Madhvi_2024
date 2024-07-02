@@ -1,40 +1,44 @@
 import React from 'react';
-import { motion } from 'framer-motion'; // Import motion from Framer Motion library
-import '../experience/Experience.css'; // Import your CSS for styling
+import { motion } from 'framer-motion'; 
+import '../experience/Experience.css'; 
+import ddu from '../assets/dduu.jpg';
+import fup from '../assets/fup.svg';
+import dt from '../assets/dt.svg';
 
 function Experience() {
-    // Define data for each experience entry
     const experiences = [
         {
             title: 'Frontend Developer Trainee',
-            company: 'Tech Solutions Ltd.',
+            company: 'Function Up',
             description: 'As a Frontend Developer Trainee, I learned HTML, CSS, and JavaScript fundamentals. I collaborated with senior developers on various projects, gaining hands-on experience in front-end web development.',
-            logo: 'https://example.com/techsolutionslogo.png', // Replace with actual logo URL
+            logo: fup,
+            duration: 'January 2023 - March 2023',
         },
         {
             title: 'Web Developer Intern',
-            company: 'Digital Innovators Inc.',
+            company: 'Deep Thought',
             description: 'During my internship, I worked on frontend and backend development tasks using React, Node.js, and MongoDB. I contributed to building responsive web applications and gained insights into agile development practices.',
-            logo: 'https://example.com/digitalinnovatorslogo.png', // Replace with actual logo URL
+            logo: dt,
+            duration: 'April 2023 - June 2023',
         },
         {
             title: 'IT Skills Trainer',
-            company: 'Deen Dayal Upadhyay Grameen Kaushal Yojna',
-            description: 'As an IT Skills Trainer, I conducted training sessions on programming languages like JavaScript, Python, and frameworks like React and Django. I facilitated hands-on workshops and mentored aspiring developers.',
-            logo: 'https://example.com/skillsacademylogo.png', // Replace with actual logo URL
+            company: 'DDU-GKY',
+            description: 'As an IT Skills Trainer, I conducted training sessions on programming languages like JavaScript, and frameworks like React, Figma, MS Office. I facilitated hands-on workshops and mentored aspiring developers.',
+            logo: ddu,
+            duration: 'July 2023 - September 2023',
         }
     ];
 
     return (
         <div className="experience-container">
-              <h2>Work Experience</h2>
+            <h2>Work Experience</h2>
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
                 className="experience-content"
             >
-              
                 <div className="experience-list">
                     {experiences.map((exp, index) => (
                         <motion.div
@@ -43,9 +47,13 @@ function Experience() {
                             whileTap={{ scale: 0.95 }}
                             className="experience-item"
                         >
-                            <img src={exp.logo} alt={`${exp.company} Logo`} className="company-logo" />
+                            <div className='company'>
+                                <img src={exp.logo} alt={`${exp.company} Logo`} className="company-logo" />
+                                <h6>{exp.company}</h6>
+                            </div>
                             <h3>{exp.title}</h3>
                             <p>{exp.description}</p>
+                            <p className="duration">{exp.duration}</p>
                         </motion.div>
                     ))}
                 </div>

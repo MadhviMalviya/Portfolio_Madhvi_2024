@@ -28,11 +28,11 @@ function Home() {
             <p>Crafting dynamic web applications with the power of the MERN stack.</p>
 
             <div className='hero-icons'>
-              <div><a href='https://www.instagram.com/madhviii____?igsh=azR5ZGxlZzZnOTdq'><FaInstagram style={{fontSize:"2.5rem"}} /></a></div>
-              <div  > <a href='https://www.facebook.com/madhvi.malviya.me' ><RiFacebookCircleLine style={{fontSize:"2.5rem"}}/></a></div>
-              <div> <a href='https://twitter.com/Madhviiiii' ><FaXTwitter style={{fontSize:"2.5rem"}}/></a> </div>
-              <div>  <a href='https://www.linkedin.com/in/madhvi-m-3a191423b' > <TbBrandLinkedin  style={{fontSize:"2.5rem"}}/></a> </div>
-              <div>  <a href='https://github.com/MadhviMalviya' ><FaGithub style={{fontSize:"2.5rem"}} /></a> </div>
+              <div><a href='https://www.instagram.com/madhviii____?igsh=azR5ZGxlZzZnOTdq'><FaInstagram style={{fontSize:"2.5rem",color:"rgb(69, 69, 208)"}} /></a></div>
+              <div  > <a href='https://www.facebook.com/madhvi.malviya.me' ><RiFacebookCircleLine style={{fontSize:"2.5rem",color:"rgb(69, 69, 208)"}}/></a></div>
+              <div> <a href='https://twitter.com/Madhviiiii' ><FaXTwitter style={{fontSize:"2.5rem",color:"rgb(69, 69, 208)"}}/></a> </div>
+              <div>  <a href='https://www.linkedin.com/in/madhvi-m-3a191423b' > <TbBrandLinkedin  style={{fontSize:"2.5rem",color:"rgb(69, 69, 208)"}}/></a> </div>
+              <div>  <a href='https://github.com/MadhviMalviya' ><FaGithub style={{fontSize:"2.5rem",color:"rgb(69, 69, 208)"}} /></a> </div>
 
             </div>
 

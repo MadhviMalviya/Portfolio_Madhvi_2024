@@ -27,51 +27,51 @@ function Contact() {
       <div className={`info-container ${inView ? "animate" : ""}`} ref={ref}>
         <ul className="contact-content">
           <li>
-            <MdOutlineEmail style={{ color: "white", fontSize: "1.5em" }} />{" "}
+            <MdOutlineEmail style={{ color: "rgb(69, 69, 208)", fontSize: "1.5em" }} />{" "}
             <a href="mailto:madhvimalviya1@gmail.com"> madhvimalviya1@gmail.com</a>
           </li>
           <li>
-            <FiPhone style={{ color: "white", fontSize: "1.5em" }} />{" "}
+            <FiPhone style={{ color: "rgb(69, 69, 208)", fontSize: "1.5em" }} />{" "}
             <a href="tel:+918770430763">+91 87704 30763</a>
           </li>
           <li>
-            <SiWhatsapp style={{ color: "white", fontSize: "1.5em" }} />{" "}
+            <SiWhatsapp style={{ color: "rgb(69, 69, 208)", fontSize: "1.5em" }} />{" "}
             <a href="https://wa.me/918827933033">+91 88279 33033</a>
           </li>
           <li>
-            <AiOutlineLinkedin style={{ color: "white", fontSize: "1.5em" }} />{" "}
+            <AiOutlineLinkedin style={{ color: "rgb(69, 69, 208)", fontSize: "1.5em" }} />{" "}
             <a href="https://www.linkedin.com/in/madhvi-m-3a191423b" target="_blank" rel="noopener noreferrer">
               Connect on LinkedIn
             </a>
           </li>
           <li>
-            <GrLocation style={{ color: "white", fontSize: "1.5em" }} />{" "}
+            <GrLocation style={{ color: "rgb(69, 69, 208)", fontSize: "1.5em" }} />{" "}
             <a href="Sehore,M.P."> Sehore,M.P.</a>
           </li>
           <li className="hero-icons">
             <div>
               <a href="https://www.instagram.com/madhviii____?igsh=azR5ZGxlZzZnOTdq">
-                <FaInstagram />
+                <FaInstagram style={{ color: "rgb(69, 69, 208)" }} />
               </a>
             </div>
             <div>
               <a href="https://www.facebook.com/madhvi.malviya.me">
-                <RiFacebookCircleLine />
+                <RiFacebookCircleLine  style={{ color: "rgb(69, 69, 208)" }}/>
               </a>
             </div>
             <div>
               <a href="https://twitter.com/Madhviiiii">
-                <FaXTwitter />
+                <FaXTwitter style={{ color: "rgb(69, 69, 208)" }} />
               </a>
             </div>
             <div>
               <a href="https://www.linkedin.com/in/madhvi-m-3a191423b">
-                <TbBrandLinkedin />
+                <TbBrandLinkedin style={{ color: "rgb(69, 69, 208)" }} />
               </a>
             </div>
             <div>
               <a href="https://github.com/MadhviMalviya">
-                <FaGithub />
+                <FaGithub  style={{ color: "rgb(69, 69, 208)" }}/>
               </a>
             </div>
           </li>
