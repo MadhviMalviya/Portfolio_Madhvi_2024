@@ -1,0 +1,76 @@
+.feedback-container{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.feedback-textarea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+   
+}
+textarea{
+   box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 1px 0px, rgba(0, 0, 0, 0.25) 0px 2px 8px 0px, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+            height: 300px;
+    width: 600px;
+    border:none;
+    padding: 2rem;
+    font-size: 1rem;
+}
+
+.feedback-heading{
+    text-align: center;
+    margin-bottom: 1rem;
+   
+}
+.feedback-heading h2{
+  letter-spacing: 5px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 0px -4px 10px rgba(255, 255, 255, 0.3);
+
+}
+
+.hero-img-container-feedback {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 30rem;
+    max-width: 30rem;
+   
+  }
+  
+.hero-img-feedback {
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    
+  }
+
+  .feedback-btn {
+    background-color: rgb(62, 62, 112);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    width: 10rem;
+    font-size: large;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .feedback-btn:hover {
+    background-color: rgb(42, 42, 73);
+  }
+  
+@media (max-width:768px){
+    textarea{
+        height: 70px;
+        width: 150px;
+        padding: 1rem;
+        font-size: 0.5rem;
+        margin:4px;
+    }
+    
+}

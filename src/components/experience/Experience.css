@@ -1,0 +1,85 @@
+/* Experience container */
+.experience-container {
+    margin-top:3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    padding-bottom: 20px;
+    padding-top: 7px;
+    flex-direction:column;
+}
+
+/* Experience content */
+.experience-content {
+    background-color: rgba(167, 167, 237, 0.621);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    width: 80%;
+}
+
+/* Experience content heading */
+.experience-container h2 {
+    margin: 1rem;
+    letter-spacing: 5px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 0px -4px 10px rgba(255, 255, 255, 0.3);
+
+}
+
+
+.experience-content p {
+    color: #666666;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+
+.experience-list {
+    display: grid;
+    gap: 20px;
+}
+
+/* Individual experience item */
+.experience-item {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+/* Company logo */
+.company-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-right: 15px;
+}
+
+/* Experience title */
+.experience-item h3 {
+    color: #333333;
+    margin-bottom: 5px;
+}
+
+/* Description */
+.experience-item p {
+    color: #666666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+    .experience-content {
+        width: 90%;
+    }
+    .experience-item{
+        flex-direction:column;
+    }
+}
