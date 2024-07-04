@@ -5,18 +5,20 @@ import react from '../assets/react.svg';
 import redux from '../assets/redux.png';
 import html from '../assets/html.png';
 import css from '../assets/css.png';
+import git from '../assets/git.png';
 import js from '../assets/javascript.png';
 import bootstrap from '../assets/bootstrap.png';
 import mongodb from '../assets/mongodb.png';
 import node from '../assets/nodejs.png';
 import figma from '../assets/figma.png';
 import mysql from '../assets/mysql.png';
+import ms from '../assets/ms.png';
 import express from '../assets/express.png';
 
 function Skills() {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.1,
+    threshold: 0.01,
   });
 
   const skills = [
@@ -30,14 +32,16 @@ function Skills() {
     { img: js, name: 'JavaScript' },
     { img: mysql, name: 'MySQL' },
     { img: bootstrap, name: 'Bootstrap' },
-    { img: figma, name: 'Figma' }
+    { img: figma, name: 'Figma' },
+    { img: git, name: 'Github' },
+    { img: ms, name: 'MS Office' }
   ];
 
   return (
     <div className='skills-list'>
       <div>
         <h2>Skills</h2>
-      </div>
+      </div> 
       <p>Here are the technologies I have been working on recently.</p>
       <ul>
         {skills.map((skill, index) => (

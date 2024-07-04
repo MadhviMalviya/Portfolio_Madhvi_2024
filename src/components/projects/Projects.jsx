@@ -1,139 +1,74 @@
-import React from 'react';
-import { Carousel } from 'react-bootstrap';
-import {
-  MDBCard,
-  MDBCardBody,
-  MDBCardTitle,
-  MDBCardText,
-  MDBCardImage,
-  MDBBtn,
-  MDBRipple
-} from 'mdb-react-ui-kit';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../projects/Project.css';
-
-const projects = [
-  {
-    id: 1,
-    image: 'https://mdbootstrap.com/img/new/standard/nature/111.webp',
-    title: 'Project 1',
-    description: 'This is a description for project 1.'
-  },
-  {
-    id: 2,
-    image: 'https://mdbootstrap.com/img/new/standard/nature/112.webp',
-    title: 'Project 2',
-    description: 'This is a description for project 2.'
-  },
-  {
-    id: 3,
-    image: 'https://mdbootstrap.com/img/new/standard/nature/113.webp',
-    title: 'Project 3',
-    description: 'This is a description for project 3.'
-  },
-  {
-    id: 4,
-    image: 'https://mdbootstrap.com/img/new/standard/nature/114.webp',
-    title: 'Project 4',
-    description: 'This is a description for project 4.'
-  },
-  {
-    id: 5,
-    image: 'https://mdbootstrap.com/img/new/standard/nature/115.webp',
-    title: 'Project 5',
-    description: 'This is a description for project 5.'
-  },
-  {
-    id: 6,
-    image: 'https://mdbootstrap.com/img/new/standard/nature/116.webp',
-    title: 'Project 6',
-    description: 'This is a description for project 6.'
-  },
-  {
-    id: 7,
-    image: 'https://mdbootstrap.com/img/new/standard/nature/117.webp',
-    title: 'Project 7',
-    description: 'This is a description for project 7.'
-  },
-  {
-    id: 8,
-    image: 'https://mdbootstrap.com/img/new/standard/nature/118.webp',
-    title: 'Project 8',
-    description: 'This is a description for project 8.'
-  },
-  {
-    id: 9,
-    image: 'https://mdbootstrap.com/img/new/standard/nature/119.webp',
-    title: 'Project 9',
-    description: 'This is a description for project 9.'
-  }
-];
-
-const ProjectCard = ({ image, title, description }) => (
-  <MDBCard className="m-2">
-    <MDBRipple rippleColor="light" rippleTag="div" className="bg-image hover-overlay">
-      <MDBCardImage src={image} fluid alt={title} />
-      <a href="#">
-        <div className="mask" style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
-      </a>
-    </MDBRipple>
-    <MDBCardBody>
-      <MDBCardTitle>{title}</MDBCardTitle>
-      <MDBCardText>{description}</MDBCardText>
-      <MDBBtn href="#">See</MDBBtn>
-    </MDBCardBody>
-  </MDBCard>
-);
+import React, { useState, useEffect } from 'react';
+import './Project.css';
+import gym from '../assets/gym.png'
+import  api from '../assets/api.png'
+import  ngo from '../assets/ngo.png'
+import weather from '../assets/weather.png'
 
 const Projects = () => {
-  const getChunks = (projects, chunkSize) => {
-    const chunks = [];
-    for (let i = 0; i < projects.length; i += chunkSize) {
-      chunks.push(projects.slice(i, i + chunkSize));
+  const projects = [
+    { title: 'Gym Website', description: 'React JS project', image:gym, codeLink: '#hukkh', projectLink: '#' },
+    { title: 'Displayed Cards using API', description: 'React JS Project ', image: api, codeLink: '#', projectLink: '#' },
+    { title: 'Weather Dashboard', description: 'Weather API and React JS ', image: weather, codeLink: '#', projectLink: 'https://madhvimalviya.github.io/weather-dashboard/' },
+    { title: 'Tech Website', description: 'Reavt' , image: 'path/to/image4.jpg', codeLink: '#', projectLink: '#' },
+    { title: 'NGO Website', description: 'HTML5/CSS3,JS and Bootstrap5', image: ngo , codeLink: 'https://github.com/MadhviMalviya/NGO_Web.git', projectLink: 'https://6686db424948c24cda2e2bb5--willowy-pudding-887e22.netlify.app/' },
+    { title: 'Book Store', description: 'React JS project', image: 'path/to/image6.jpg', codeLink: '#', projectLink: '#' },
+    { title: 'Project 7', description: 'Description 7', image: 'path/to/image7.jpg', codeLink: '#', projectLink: '#' },
+    { title: 'Project 8', description: 'Description 8', image: 'path/to/image8.jpg', codeLink: '#', projectLink: '#' },
+    { title: 'Project 9', description: 'Description 9', image: 'path/to/image9.jpg', codeLink: '#', projectLink: '#' },
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const cardsPerPage = window.innerWidth < 600 ? 1 : 3;
+
+  const handleNext = () => {
+    if (currentIndex < projects.length - cardsPerPage) {
+      setCurrentIndex(currentIndex + cardsPerPage);
+    } else {
+      setCurrentIndex(0); 
     }
-    return chunks;
   };
 
-  const [chunkSize, setChunkSize] = React.useState(3);
+  const handlePrev = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - cardsPerPage);
+    }
+  };
 
-  React.useEffect(() => {
-    const updateChunkSize = () => {
-      if (window.innerWidth < 768) {
-        setChunkSize(1);
-      } else if (window.innerWidth < 1024) {
-        setChunkSize(2);
-      } else {
-        setChunkSize(3);
-      }
-    };
-    window.addEventListener('resize', updateChunkSize);
-    updateChunkSize();
-    return () => window.removeEventListener('resize', updateChunkSize);
-  }, []);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleNext();
+    }, 10000);
 
-  const chunkedProjects = getChunks(projects, chunkSize);
+    return () => clearInterval(interval); 
+  }, [currentIndex]); 
 
   return (
-    
+    <>
+      
+      <div className="project-main">
+      <h2>Projects</h2>
+    <div className="project-heading">
+   
+  </div>
     <div className="carousel-container">
-       <h2 className="heading">Projects</h2>
-      <Carousel indicators={false} prevLabel="" nextLabel="">
-        {chunkedProjects.map((projectChunk, idx) => (
-          <Carousel.Item key={idx}>
-            <div className="d-flex justify-content-center">
-              {projectChunk.map((project) => (
-                <ProjectCard
-                  key={project.id}
-                  image={project.image}
-                  title={project.title}
-                  description={project.description}
-                />
-              ))}
+      <button onClick={handlePrev} disabled={currentIndex === 0}>Prev</button>
+      <div className="carousel">
+        {projects.slice(currentIndex, currentIndex + cardsPerPage).map((project, index) => (
+          <div className="card" key={index}>
+            <img src={project.image} alt={project.title} className="card-img-top" />
+            <div className="card-body">
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+              <a href={project.codeLink} className="button"> Code</a>
+              <a href={project.projectLink} className="button">See </a>
             </div>
-          </Carousel.Item>
+          </div>
         ))}
-      </Carousel>
-    </div>
+      </div>
+      <button onClick={handleNext} disabled={currentIndex >= projects.length - cardsPerPage}>Next</button>
+      </div></div>
+      </>
   );
 };
 

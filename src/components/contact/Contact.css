@@ -19,13 +19,16 @@
     margin-bottom: 0;
 }
 .contact-child-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-top: 16.2rem;
 }
 
 .h2 {
     text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 1rem;
     color: #333;
 }
 
@@ -66,7 +69,7 @@
     box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
     display: flex;
     align-items: center;
-    height: 3rem;
+    height: 2rem;
     justify-content: center;
     font-size: 1.1rem;
     width: 18rem;
@@ -116,7 +119,7 @@
         background-image: none;
         background-position:center;
         height: max-content;
-        width: max-content;
+      
     }
 
     .contact-content {
@@ -125,7 +128,7 @@
     }
 
     .contact-child-container {
-        margin-top: 2rem;
+        margin-top: 0rem;
         
     }
 

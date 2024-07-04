@@ -37,12 +37,13 @@ function Home() {
             </div>
 
             <div className='resume-container' >
-              <button className='resume-btn'> <a href='https://drive.google.com/file/d/1VvGRQsQLD82HXoq8T1VunG02fYQzRuW0/view'>Resume</a></button>
+              <button className='resume-btn'> <a href=''>Resume</a></button>
             </div>
           </div>
         </div>
-      
-      <About />
+        <section id='about'>  <About /></section>
+        
+    
       <Skills />
         <Projects />
         <Experience/>

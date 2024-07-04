@@ -9,6 +9,7 @@ import Navbar from './components/nav/Navbar';
 import Footer from './components/footer/Footer';
 import Experience from './components/experience/Experience';
 import Skills from './components/skills/Skills';
+import ScrollToTop from './components/ScrollToTop';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
     <div className="App">
      
       <BrowserRouter>
+        <ScrollToTop/>
         <Navbar />
         <Routes>
           <Route path={'/'} element={<Home />}></Route>

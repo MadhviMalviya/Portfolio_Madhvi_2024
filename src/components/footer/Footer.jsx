@@ -7,8 +7,8 @@ function Footer() {
             <footer className='footer-container'>
                 <div className='footer-items'>
 
-                    <div>
-                    <h2>Madhvi <span style={{ color: 'rgb(69, 69, 208)' }}> Malviya</span> </h2>
+                    <div className='logo'>
+                    <h1>Madhvi <span style={{ color: 'rgb(69, 69, 208)' }}> Malviya</span> </h1>
                     </div>
                     <div>
                         <ul>

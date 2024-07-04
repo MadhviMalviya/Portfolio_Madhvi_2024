@@ -21,9 +21,10 @@ function Contact() {
     <div className="contact-container">
       <div className="contact-child-container">
         <h2>Contact Me</h2>
+        <p className="p">Feel free to reach out to me. I'm always here to help.</p>
       </div>
 
-      <p className="p">Feel free to reach out to me. I'm always here to help.</p>
+    
       <div className={`info-container ${inView ? "animate" : ""}`} ref={ref}>
         <ul className="contact-content">
           <li>

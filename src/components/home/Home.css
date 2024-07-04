@@ -11,7 +11,7 @@
   justify-content: center;
   gap: 2rem;
   align-items: center;
-  padding-top: 7rem;
+  padding-top: 6rem;
 }
 
 .home-container h1 {
@@ -41,7 +41,7 @@ font-weight: bolder;
   max-width: 100%; 
   margin-top: 2rem;
   margin-bottom: 1.2rem;
-  animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms infinite;
+  animation: typewriter 2s steps(44) 1s 1 normal both, blinkTextCursor 500ms infinite;
 }
 
 
@@ -175,4 +175,24 @@ a {
   to {
     border-right-color: transparent;
   }
+}
+
+
+
+.hero-img {
+  animation: fadeIn 0s ease-in-out;
+}
+
+.hero-content {
+  animation: slideIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
