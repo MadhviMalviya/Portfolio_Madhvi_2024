@@ -33,9 +33,9 @@ function Footer() {
                         </ul>
                     </div>
                     <div className='subscribe'>
-                        <h3>Subscribe for the News Letter</h3>
+                        <h3>Sent an email to me</h3>
                         <input type='text' placeholder='Enter your email'></input>
-                        <button>Subscribe</button>
+                        <button>Sent</button>
                     </div>
                 </div>
 
