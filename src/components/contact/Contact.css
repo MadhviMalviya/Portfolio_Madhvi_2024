@@ -38,7 +38,7 @@
     text-align: center;
 }
 
-/* Info Container Styles */
+
 .info-container {
     display: flex;
     justify-content: center;
@@ -115,6 +115,7 @@
   
 @media (max-width: 768px) {
     .contact-container {
+        margin-top: 3rem;
         /* background-image: url('../assets/img9.svg'); */
         background-image: none;
         background-position:center;
